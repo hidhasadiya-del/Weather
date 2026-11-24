@@ -1,23 +1,15 @@
+
 function SearchBar({ city, setCity, onSearch }) {
     return (
-        <form
-            className="search-bar"
-            onSubmit={(event) => {
-                event.preventDefault();
-                onSearch();
-            }}
-        >
+        <div className="search-bar">
             <input
                 type="text"
-                placeholder="Enter city name"
+                placeholder="Enter city"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
             />
-
-            <button type="submit">
-                Search
-            </button>
-        </form>
+            <button onClick={onSearch}>Search</button>
+        </div>
     );
 }
 
